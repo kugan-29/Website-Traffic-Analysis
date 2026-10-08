@@ -17,6 +17,7 @@ An end-to-end data analytics project: raw CSV → **MySQL** (cleaning & analysis
   <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black"/>
   <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
   <img src="https://img.shields.io/badge/DAX-FF6F00?style=flat-square"/>
+  <img src="https://img.shields.io/badge/GitHub-FF6F00?style=flat-square"/>
 </p>
 
 - **MySQL** – data loading, data quality checks, aggregation queries, view for reporting
@@ -27,13 +28,9 @@ An end-to-end data analytics project: raw CSV → **MySQL** (cleaning & analysis
   
 
 ---
-## 🤗 Objective
-Understand how website traffic converts into business value, and find out:
-
-- Which traffic sources and campaigns drive the most sessions and revenue
-- Which channels bring **high-quality** traffic (high conversion, low bounce)
-- Where there is room to improve
-
+## 🫡What I Did
+- SQL: loaded data into MySQL, ran data quality checks (0 nulls, 0 duplicates), analysed sources, campaigns and monthly trends, created a view for Power BI
+- Power BI: built a date table and data model, wrote DAX measures (Conversion Rate, sessions-weighted Bounce Rate, Revenue per Session, MoM %), designed an    interactive dashboard with slicers
 ---
 
 ## 📊 Dataset
@@ -81,21 +78,7 @@ Key queries (all in [`sql/`](sql/)):
 - Revenue per session by traffic source
 - Slicers: Device, Country, Day Type
 - Custom night-sky theme
-
----
-
-## 🔑 Key KPIs
-
-| KPI | Value |
-|---|---|
-| Total Sessions | 819,973 |
-| Total Conversions | 40,029 |
-| Total Revenue | ~2.26M |
-| Conversion Rate | 4.88% |
-| Bounce Rate | 44.67% |
-| Revenue per Session | 2.76 |
-
----
+  ---
 
 ## ✨ Key Insights
 
@@ -103,11 +86,10 @@ Key queries (all in [`sql/`](sql/)):
 2. **Email is the highest-quality traffic**: only 8% of sessions, but the best conversion rate (7.67%), lowest bounce rate (32%) and highest revenue per session (4.36).
 3. **Social Media underperforms**: 16% of sessions, but the highest bounce rate (57%) and the lowest revenue per session (2.34).
 
-### 💡 Recommendations
-
-- Scale Email campaigns, since they bring the best value per session.
-- Keep investing in SEO, the largest revenue source.
-- Review Social Media targeting and landing pages to reduce bounce.
+## 📂 Files
+- sql/ – table, quality checks, analysis queries, [Explore](Website_traffic_analysis.sql)
+- powerbi/ – [Dashboard](Website_traffic_analysisi.pbix)
+- images/ – [View](Website_traffic_analysis.png)
 ---
 
 ## Author

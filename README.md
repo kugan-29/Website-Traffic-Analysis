@@ -8,11 +8,11 @@ An end-to-end data analytics project: raw CSV → **MySQL** (cleaning & analysis
 - [View dashboard (PDF)](website_traffic.pdf)
 - [SQL queries](Website_traffic_analysis.sql)
  
-## View the Work
+## 😉 View the Work
 ![Dashboard](Website_traffic_analysis.png)
 
 ---
-## Tools Used
+## 🛠️ Tools Used
 <p>
   <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black"/>
   <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
@@ -27,8 +27,7 @@ An end-to-end data analytics project: raw CSV → **MySQL** (cleaning & analysis
   
 
 ---
-## Objective
-
+## 🤗 Objective
 Understand how website traffic converts into business value, and find out:
 
 - Which traffic sources and campaigns drive the most sessions and revenue
@@ -37,7 +36,7 @@ Understand how website traffic converts into business value, and find out:
 
 ---
 
-## Dataset
+## 📊 Dataset
 
 | Item | Details |
 |---|---|
@@ -56,7 +55,7 @@ CSV  →  MySQL table  →  Data quality checks  →  SQL analysis
      →  Date table + relationship  →  DAX measures  →  Dashboard
 ```
 
-### 1. Data quality checks (SQL)
+### 1. 💪 Data quality checks (SQL)
 
 - 12,000 rows loaded, totals reconciled with the source file
 - 0 NULL values in key columns
@@ -64,7 +63,7 @@ CSV  →  MySQL table  →  Data quality checks  →  SQL analysis
 - Date range valid (365 distinct days)
 - Logic checks passed (`new_users ≤ users ≤ sessions`)
 
-### 2. SQL analysis
+### 2. 🐬 SQL analysis
 
 Key queries (all in [`sql/`](sql/)):
 
@@ -73,51 +72,7 @@ Key queries (all in [`sql/`](sql/)):
 - Top 5 campaigns by revenue
 - Monthly sessions and revenue trend
 
-```sql
-SELECT traffic_source,
-       SUM(sessions)       AS sessions,
-       SUM(conversions)    AS conversions,
-       ROUND(SUM(revenue)) AS revenue
-FROM traffic_data
-GROUP BY traffic_source
-ORDER BY revenue DESC;
-```
-
-### 3. SQL view for Power BI
-
-`v_traffic_clean` adds helper columns so rates can be calculated correctly in Power BI:
-
-- `bounced_sessions = bounce_rate * sessions`
-- `total_duration_sec = avg_session_duration_sec * sessions`
-- `day_type` (Weekday / Weekend)
-
-Bounce Rate is stored per row, so a simple average would be wrong. It is calculated as a **sessions-weighted** rate instead.
-
-### 4. Power BI model and DAX
-
-- Star-style model: `Dim_Date` (1) → `Fact_traffic` (many)
-- `Dim_Date` marked as the date table, Month sorted by Month Number
-
-```dax
-Total Sessions = SUM(Fact_traffic[sessions])
-
-Conversion Rate = DIVIDE([Total Conversions], [Total Sessions])
-
-Bounce Rate =
-DIVIDE(SUM(Fact_traffic[bounced_sessions]), [Total Sessions])
-
-Revenue per Session = DIVIDE([Total Revenue], [Total Sessions])
-
-Sessions MoM % =
-VAR PrevMonth = CALCULATE([Total Sessions], DATEADD(Dim_Date[Date], -1, MONTH))
-RETURN DIVIDE([Total Sessions] - PrevMonth, PrevMonth)
-```
-
-Full list in [`dax/measures.md`](dax/measures.md).
-
----
-
-## Dashboard Features
+## 📈 Dashboard Features
 
 - 6 KPI cards: Sessions, Conversions, Revenue, Conversion Rate, Bounce Rate, Revenue per Session
 - Monthly sessions trend (line chart)
@@ -129,7 +84,7 @@ Full list in [`dax/measures.md`](dax/measures.md).
 
 ---
 
-## Key KPIs
+## 🔑 Key KPIs
 
 | KPI | Value |
 |---|---|
@@ -142,7 +97,7 @@ Full list in [`dax/measures.md`](dax/measures.md).
 
 ---
 
-## Key Insights
+## ✨ Key Insights
 
 1. **Organic Search is the biggest channel**: 34% of sessions and about 32% of revenue (716K). Three of the top four campaigns are SEO.
 2. **Email is the highest-quality traffic**: only 8% of sessions, but the best conversion rate (7.67%), lowest bounce rate (32%) and highest revenue per session (4.36).
@@ -153,38 +108,6 @@ Full list in [`dax/measures.md`](dax/measures.md).
 - Scale Email campaigns, since they bring the best value per session.
 - Keep investing in SEO, the largest revenue source.
 - Review Social Media targeting and landing pages to reduce bounce.
-
----
-
-## Repository Structure
-
-```
-├── data/
-│   └── Website_Traffic_Analysis_Dataset.csv
-├── sql/
-│   ├── 01_create_table.sql
-│   ├── 02_data_quality_checks.sql
-│   ├── 03_analysis_queries.sql
-│   └── 04_create_view.sql
-├── dax/
-│   └── measures.md
-├── powerbi/
-│   ├── Website_Traffic_Dashboard.pbix
-│   └── Night_Sky_Theme.json
-├── images/
-│   └── dashboard.png
-└── README.md
-```
-
----
-
-## How to Run
-
-1. Run `sql/01_create_table.sql` in MySQL and import the CSV into `traffic_data`
-2. Run the data quality, analysis and view scripts in order
-3. Open `Website_Traffic_Dashboard.pbix` in Power BI Desktop
-4. Update the data source (MySQL server and database) and refresh
-
 ---
 
 ## Author

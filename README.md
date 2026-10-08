@@ -103,7 +103,7 @@ Key queries (all in [`sql/`](sql/)):
 2. **Email is the highest-quality traffic**: only 8% of sessions, but the best conversion rate (7.67%), lowest bounce rate (32%) and highest revenue per session (4.36).
 3. **Social Media underperforms**: 16% of sessions, but the highest bounce rate (57%) and the lowest revenue per session (2.34).
 
-### Recommendations
+### 💡 Recommendations
 
 - Scale Email campaigns, since they bring the best value per session.
 - Keep investing in SEO, the largest revenue source.

@@ -1,21 +1,32 @@
 # Website Traffic Analysis Dashboard
 
+## 📖 Overview 
 An end-to-end data analytics project: raw CSV → **MySQL** (cleaning & analysis) → **Power BI** (data model, DAX, interactive dashboard).
 
-> **Note:** This project uses a **sample (synthetic) dataset** for portfolio purposes. It is not real company data.
-
----
+## 🔗 View the Dashboard
 - [Download Power BI file (.pbix)](Website_traffic_analysisi.pbix) (open in Power BI Desktop)
-- 
-
-## Dashboard Preview
-
+- [View dashboard (PDF)](website_traffic.pdf)
+- [SQL queries](Website_traffic_analysis.sql)
+ 
+## View the Work
 ![Dashboard](Website_traffic_analysis.png)
 
-**Live report:** _
+---
+## Tools Used
+<p>
+  <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black"/>
+  <img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/DAX-FF6F00?style=flat-square"/>
+</p>
+
+- **MySQL** – data loading, data quality checks, aggregation queries, view for reporting
+  
+- **Power BI Desktop** – Power Query, data modeling, DAX, dashboard design
+  
+- **DAX** – KPI measures, time intelligence
+  
 
 ---
-
 ## Objective
 
 Understand how website traffic converts into business value, and find out:
@@ -34,17 +45,6 @@ Understand how website traffic converts into business value, and find out:
 | Period | 1 Jan 2025 – 31 Dec 2025 (365 days) |
 | Granularity | Date + hour level |
 | Key columns | Date, Country, City, Traffic Source, Campaign, Device, Landing Page, Users, Sessions, Bounce Rate, Conversions, Revenue |
-
-File: `data/Website_Traffic_Analysis_Dataset.csv`
-
----
-
-## Tools Used
-
-- **MySQL** – data loading, data quality checks, aggregation queries, view for reporting
-- **Power BI Desktop** – Power Query, data modeling, DAX, dashboard design
-- **DAX** – KPI measures, time intelligence
-- **Git / GitHub** – version control and documentation
 
 ---
 
@@ -191,4 +191,4 @@ Full list in [`dax/measures.md`](dax/measures.md).
 
 **Kugan J**
 Data Analyst | SQL · Power BI · Excel · Python
-[LinkedIn](https://linkedin.com/in/kugan-j) · [GitHub](https://github.com/kugan-29) · [Portfolio](https://kugan-29.github.io/portfolio)
+[LinkedIn](https://linkedin.com/in/kugan-j) · [Portfolio](https://kugan-29.github.io/portfolio)

@@ -78,7 +78,7 @@ Key queries (all in [`sql/`](sql/)):
 - Revenue per session by traffic source
 - Slicers: Device, Country, Day Type
 - Custom night-sky theme
-  ---
+ ---
 
 ## ✨ Key Insights
 
@@ -86,11 +86,6 @@ Key queries (all in [`sql/`](sql/)):
 2. **Email is the highest-quality traffic**: only 8% of sessions, but the best conversion rate (7.67%), lowest bounce rate (32%) and highest revenue per session (4.36).
 3. **Social Media underperforms**: 16% of sessions, but the highest bounce rate (57%) and the lowest revenue per session (2.34).
 
-## 📂 Files
-- sql/ – table, quality checks, analysis queries, [Explore](Website_traffic_analysis.sql)
-- powerbi/ – [Dashboard](Website_traffic_analysisi.pbix)
-- images/ – [View](Website_traffic_analysis.png)
----
 
 ## Author
 

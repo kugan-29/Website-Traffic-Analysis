@@ -8,9 +8,9 @@ An end-to-end data analytics project: raw CSV → **MySQL** (cleaning & analysis
 
 ## Dashboard Preview
 
-![Dashboard](images/dashboard.png)
+![Dashboard](Website_traffic_analysis.png)
 
-**Live report:** _add your Power BI Service link here_
+**Live report:** _
 
 ---
 

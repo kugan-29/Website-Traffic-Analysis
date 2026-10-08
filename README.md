@@ -5,6 +5,8 @@ An end-to-end data analytics project: raw CSV → **MySQL** (cleaning & analysis
 > **Note:** This project uses a **sample (synthetic) dataset** for portfolio purposes. It is not real company data.
 
 ---
+- [Download Power BI file (.pbix)](Website_traffic_analysisi.pbix) (open in Power BI Desktop)
+- 
 
 ## Dashboard Preview
 

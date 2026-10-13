@@ -58,7 +58,7 @@ CSV  →  MySQL table  →  Data quality checks  →  SQL analysis
 
 ### 1. 💪 Data quality checks (SQL)
 
-- 12,000 rows loaded, totals reconciled with the source file
+- 4,000 rows loaded, totals reconciled with the source file
 - 0 NULL values in key columns
 - 0 duplicate rows
 - Date range valid (365 distinct days)

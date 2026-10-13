@@ -41,7 +41,7 @@ An end-to-end data analytics project: raw CSV → **MySQL** (cleaning & analysis
 
 | Item | Details |
 |---|---|
-| Rows | 12,000 |
+| Rows | 4,000 |
 | Period | 1 Jan 2025 – 31 Dec 2025 (365 days) |
 | Granularity | Date + hour level |
 | Key columns | Date, Country, City, Traffic Source, Campaign, Device, Landing Page, Users, Sessions, Bounce Rate, Conversions, Revenue |
